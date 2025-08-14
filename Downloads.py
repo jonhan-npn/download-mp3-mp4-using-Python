@@ -10,7 +10,7 @@ class MediaDownloader:
     def __init__(self, save_path: str = "downloads"):
         self.save_path = save_path
         self._ensure_directory()
-        self._check_ffmpeg()
+        # self._check_ffmpeg()
 
     def _ensure_directory(self) -> None:
         if not os.path.exists(self.save_path):
@@ -18,12 +18,12 @@ class MediaDownloader:
             print(f"Directory created at {self.save_path}.")
         else:
             print(f"Directory already exists at {self.save_path}.")
-
-    def _check_ffmpeg(self):
-        if not shutil.which("ffmpeg"):
-            raise EnvironmentError(
-                "ffmpeg is not installed. Install with:\n  sudo apt install ffmpeg"
-            )
+#For linux user
+    # def _check_ffmpeg(self):
+    #     if not shutil.which("ffmpeg"):
+    #         raise EnvironmentError(
+    #             "ffmpeg is not installed. Install with:\n  sudo apt install ffmpeg"
+    #         )
 
     def download(self, url: str, media_type: str = "mp4"):
         if media_type.lower() == "mp3":
