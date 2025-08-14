@@ -1,3 +1,7 @@
-python3 -m venv <name> //install Virtual Environment
+first you need to install virtual environments:
 
-pip install yt_dlp
+        - python3 -m venv <name> //install Virtual Environment
+
+downloads:
+
+        -pip install yt_dlp
